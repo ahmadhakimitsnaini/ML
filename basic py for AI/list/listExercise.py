@@ -1,6 +1,8 @@
 # EXERCISE LIST IN PYTHON
 
-# Question number 1
+# Level 1: Dasar & Slicing
+
+# Question Number 1
 """
     1. Tiga nilai pertama.
     2. Dua nilai terakhir.
@@ -12,8 +14,7 @@ print(nilai[:3])
 print(nilai[-2 :])
 print(nilai[3])
 
-
-# Question number 2
+# Question Number 2
 """
     Balik Urutan: Buatlah fungsi yang menerima list nama streetwear 
     (misal: ['Off-White', 'Stussy', 'Supreme']) dan 
@@ -24,3 +25,43 @@ def reverseBrand(brand):
 
 Brand = ["off white", "vans", "Nike", "Adidas", "New Balance"]
 print(reverseBrand(Brand))
+
+
+# Level 2: Logika & Transformasi
+
+# Question Number 3
+"""
+    Normalisasi Sederhana: Dalam AI, kita sering mengubah skala data. 
+    Diberikan list data = [10, 20, 30, 40, 50]. 
+    Buatlah list baru di mana setiap elemennya dibagi dengan nilai maksimal (50).
+
+    Hasil yang diharapkan: [0.2, 0.4, 0.6, 0.8, 1.0].
+"""
+data = [10, 20, 30, 40, 50]
+maxData = max(data)
+dataFinal = []
+
+for x in data :
+    divided = x / maxData
+    dataFinal.append(divided)
+
+print(dataFinal)
+
+# Question Number 4
+"""
+    Filter Data Ganjil: Buatlah fungsi yang menerima list angka dan hanya mengembalikan
+    angka-angka yang genap saja menggunakan List Comprehension.
+"""
+def filterAngka(filterData) : 
+    return [y for y in filterData if y % 2 == 0]
+
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(filterAngka(data))
+    
+
+
+
+
+
+
+
