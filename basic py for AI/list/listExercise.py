@@ -57,7 +57,41 @@ def filterAngka(filterData) :
 
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(filterAngka(data))
-    
+
+
+# Level 3: Kasus Penggunaan AI (Advanced)
+
+# Question Number 5 
+"""
+    Hitung Rata-rata: Buat fungsi hitung_rerata(L) yang menghitung rata-rata dari sebuah list angka. 
+    Pastikan fungsi Anda bisa menangani list kosong (kembalikan 0 jika list kosong agar tidak terjadi error pembagian nol).
+"""
+def hitung_rerata(rata):
+    if rata :
+        hitung = [y for y in rata]
+        return sum(hitung) / len(hitung) # sum method for calculate total and len for calculate length of list
+    else :
+        print(0)
+
+# rerata = [100,100,50,100,50]
+rerata2 = []
+print(hitung_rerata(rerata2))
+
+# Question number 6
+"""
+    Pencarian Target: Diberikan list koordinat titik = [2, 5, 8, 12, 15]. 
+    Buat program yang meminta input angka dari pengguna, 
+    lalu tentukan apakah angka tersebut ada di dalam list atau tidak. 
+    Jika ada, cetak posisinya (indeksnya).
+"""
+titik = [2, 5, 8, 12, 15]
+cari = int(input("Angka yang akan di cari : "))
+if cari in titik : 
+    print(f"{cari} ada pada index {titik.index(cari)}")
+else:
+    print(f"{cari} does't exist in the list")
+
+
 
 
 
