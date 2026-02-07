@@ -9,8 +9,8 @@
        (Latihan ini relevan untuk rencana Anda membangun sistem login atau dashboard e-commerce)
 """
 
-# username = str(input("Masukkan Username       : "))
-# role =     str(input ("Masukkan Role Pengguna  : "))
+username = str(input("Masukkan Username       : "))
+role =     str(input ("Masukkan Role Pengguna  : "))
 def auth(username, role) : 
     if role == "Admin" or role == "admin" :
         print("Akses penuh diberikan")
@@ -19,7 +19,7 @@ def auth(username, role) :
     else :
         print("Akses Di Tolak")
 
-# auth(username, role)
+auth(username, role)
 
 
 # Soal 2: Klasifikasi Data Sensor
@@ -70,3 +70,23 @@ def hitung_harga(totalBelanja) :
     
 belanjaan = 600000
 print(hitung_harga(belanjaan))
+
+
+# 4. Tantangan "Just-in-Time" (Advanced)
+"""
+    Soal: Diberikan list nilai mahasiswa nilai_praktikum = [60, 80, 45, 90, 70, 55].
+    Buatlah list baru berisi status "Lulus" jika nilai > 65 dan "Gagal" jika nilai < 65.
+    Gunakan List Comprehension seperti pada jawaban nomor 4 sebelumnya.
+"""
+nilai_praktikum = [60, 80, 45, 90, 70, 55]
+lulus = []
+gagal = []
+for x in nilai_praktikum : 
+    if x >= 65 : 
+        lulus.append(x) # append method use for add item to list
+        
+    elif x <= 65 : 
+        gagal.append(x)
+        
+print(f"Nilai yang lulus = {lulus}")
+print(f"Nilai yang gagal = {gagal}")
