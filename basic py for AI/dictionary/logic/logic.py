@@ -29,6 +29,7 @@ def auth(username, role) :
     1. Suhu < 0     : "Membeku"
     2. Suhu 0 - 30  : "Normal"
     3. Suhu > 30    : "Panas"
+
     Tambahkan pengecekan: Jika suhu di atas 100, cetak "Peringatan: Sensor Rusak!".
 """
 inputSuhu = int(input ("Masukkan suhu : "))
@@ -42,3 +43,30 @@ elif inputSuhu > 100:
     print("Peringatan : Sensor Rusak!")
 else : 
     print("Maaf suhu tidak terdeteksi")
+
+
+# Soal 3: Logika Diskon Shopee
+"""
+    Bayangkan Anda sedang mengatur logika untuk toko "alwaystous" di Shopee. Buat fungsi hitung_harga(total_belanja):
+
+    1. Jika belanja lebih dari Rp500.000, berikan diskon 10%. 
+    2. Jika belanja antara Rp200.000 - Rp500.000, berikan diskon 5%.
+    3. Jika di bawah Rp200.000, tidak ada diskon.
+
+    Kembalikan nilai harga akhir yang harus dibayar.
+"""
+def hitung_harga(totalBelanja) : 
+    if totalBelanja > 500000 : 
+        harga = totalBelanja - (totalBelanja * 0.10) # Rumus mencari diskon 
+        print(harga)
+    elif totalBelanja >= 200000 and totalBelanja <= 500000 : 
+        harga = totalBelanja - (totalBelanja * 0.5)
+        print(harga)
+    elif totalBelanja < 200000 : 
+        harga = totalBelanja
+        print(harga)
+    else : 
+        print("Tidak ada diskon yang tersedia")
+    
+belanjaan = 600000
+print(hitung_harga(belanjaan))
