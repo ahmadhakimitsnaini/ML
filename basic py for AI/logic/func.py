@@ -34,4 +34,32 @@ words = sorted(some, key = lambda x : len(x))        # This Function Will Sorted
 print(words)
 
 
+# --- 2. RECURSION FUNCTIONS (Recursion is when a function calls itself. is a common mathematical and programming concept) ---
+
+# Example for Recursion Functions
+def countdown (n) : 
+    if n <= 0 :
+        print("Done")
+    else : 
+        print(n)
+        countdown(n - 1)              # This statement will call function it self.
+
+# Base Case and Recursive Case
+def factorial(n) : 
+    if n == 1 or n == 0 :             # A base case - A condition that stops the recursion.
+        return 1 
+    else : 
+        return n * factorial(n - 1)   # A recursive case - The function calling itself with a modified argument.
+                                      # Without base case will make function call it self forever, and causing stack overflow error.
+print(factorial(5))                     
+
+# Fibonacci Sequence Rumus = F(n) = F(n−1) + F(n−2)  
+def fibonacci(n) : 
+    if n <= 1 :                      # This important to stop recursion
+        return n
+    else :
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(fibonacci(7))                 # This mean is fibonacci(6) = 8 + fibonacci(5) = 5.
+    
 
