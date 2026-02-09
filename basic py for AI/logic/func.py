@@ -3,8 +3,8 @@
 # --- 1. LAMBDA FUNCTIONS (Syntax = lambda arguments : expression) ---
 
 # Example from lambda function
-x = lambda y : y + 10       # Lambda with single parameter
-z = lambda x, y : x * y     # Lambda with multi parameter
+x = lambda y : y + 10        # Lambda with single parameter
+z = lambda x, y : x * y      # Lambda with multi parameter
 
 
                             
@@ -55,11 +55,35 @@ print(factorial(5))
 
 # Fibonacci Sequence Rumus = F(n) = F(n−1) + F(n−2)  
 def fibonacci(n) : 
-    if n <= 1 :                      # This important to stop recursion
+    if n <= 1 :                       # This important to stop recursion
         return n
     else :
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-print(fibonacci(7))                 # This mean is fibonacci(6) = 8 + fibonacci(5) = 5.
+print(fibonacci(7))                  # This mean is fibonacci(6) = 8 + fibonacci(5) = 5.
     
+
+# --- 3. Recursion with Lists (Recursion can be used to process lists by handling one element at a time) ---
+
+# Calculate the sum of all elements in a list:
+def sumList(numbers) : 
+    if len(numbers) == 0 :
+        return 0
+    else : 
+        return numbers[0] + sumList(numbers[1:])  # Sum all element on list
+
+sumNumList = [1, 2, 3, 4, 5]
+print(sumList(sumNumList))
+
+# Find the maximum value in a list:
+def find_max(max) : 
+    if len(max) == 1 :                                          # Base Case
+        return max[0]
+    else : 
+        check_max = find_max(max[1:])                           # Take list from first index until last index and remove first element.
+        return max[0] if max[0] > check_max else check_max      # compare the first element with rest of list.
+
+maximal = [1, 2, 3, 4, 5, 6, 7, 8]
+print(find_max(maximal))
+
 
