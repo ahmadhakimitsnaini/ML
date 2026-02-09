@@ -34,7 +34,7 @@ words = sorted(some, key = lambda x : len(x))        # This Function Will Sorted
 print(words)
 
 
-# --- 2. RECURSION FUNCTIONS (Recursion is when a function calls itself. is a common mathematical and programming concept) ---
+# --- 3. RECURSION FUNCTIONS (Recursion is when a function calls itself. is a common mathematical and programming concept) ---
 
 # Example for Recursion Functions
 def countdown (n) : 
@@ -63,7 +63,7 @@ def fibonacci(n) :
 print(fibonacci(7))                  # This mean is fibonacci(6) = 8 + fibonacci(5) = 5.
     
 
-# --- 3. Recursion with Lists (Recursion can be used to process lists by handling one element at a time) ---
+# --- 4. Recursion with Lists (Recursion can be used to process lists by handling one element at a time) ---
 
 # Calculate the sum of all elements in a list:
 def sumList(numbers) : 
@@ -85,5 +85,16 @@ def find_max(max) :
 
 maximal = [1, 2, 3, 4, 5, 6, 7, 8]
 print(find_max(maximal))
+
+# Find the minimum value in a list
+def find_minim(minim) :
+    if len(minim) == 1:
+        return minim[0]
+    else : 
+        check_minim = find_minim(minim[1:])
+        return minim[0] if minim[0] < check_minim else check_minim
+    
+minimal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(find_minim(minimal))
 
 
