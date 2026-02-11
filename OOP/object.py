@@ -91,6 +91,64 @@ my_car = Car("BMW M3", "Red")
 # When we call print(object), Python automatically looks for the __str__ method
 print(my_car) 
 
+
+# ==============================================================================
+# PART 3: INHERITANCE (Pewarisan Sifat)
+# ==============================================================================
+"""
+CONCEPT:
+Inheritance allows a class (Child) to derive attributes and methods from another class (Parent).
+This promotes code reusability. We don't need to rewrite the 'get_biodata' method
+for UgmPerson because they inherit it from Employee.
+"""
+
+# Definisi Child Class (Subclass)
+# Format: class ChildName(ParentName):
+class UgmPerson(Employee): 
+    """
+    Subclass of Employee. 
+    The 'pass' keyword means this class has no unique code/methods of its own yet;
+    it simply inherits EVERYTHING from the Employee class.
+    """
+    pass
+
+class ItbPerson(Employee): 
+    """
+    Subclass of Employee.
+    """
+    pass 
+
+# --- Execution Example 3 ---
+print("\n--- INHERITANCE DEMO ---")
+
+# 1. Instantiation (Creating Objects)
+# Kita bisa memasukkan argumen (name, age, uni) meskipun di class UgmPerson
+# tidak ada method __init__, karena ia meminjam __init__ milik Employee.
+itb_person1 = ItbPerson("Ahmad Hakim Itsnaini", 20, "Institut Teknologi Bandung")
+ugm_person1 = UgmPerson("Sani", 21, "Universitas Gadjah Mada")
+
+# 2. Method Invocation
+# Memanggil method milik Parent (Employee) dari object Child
+print(f"ITB Bio: {itb_person1.get_biodata()}")
+
+# Output object itu sendiri (akan menampilkan alamat memori kecuali kita buat __str__ di Parent)
+print(f"Object Info: {itb_person1}") 
+
+# 3. Method with Arguments
+print(f"UGM Talent: {ugm_person1.show_talent('Machine Learning')}")
+
+# 4. Checking Relationships (isinstance)
+# Fungsi isinstance() digunakan untuk mengecek apakah sebuah object berasal dari class tertentu.
+print("\n--- RELATIONSHIP CHECK ---")
+
+# Apakah itb_person1 adalah Employee? -> True (Karena ItbPerson anak dari Employee)
+print(f"Is ITB Person an Employee? : {isinstance(itb_person1, Employee)}")
+
+# Apakah ugm_person1 adalah ItbPerson? -> False (Karena mereka saudara beda class)
+print(f"Is UGM Person an ITB Person? : {isinstance(ugm_person1, ItbPerson)}")
+
+
+
 # ==============================================================================
 # THEORETICAL NOTES (4 PILLARS OF OOP)
 # ==============================================================================
