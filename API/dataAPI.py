@@ -1,1 +1,1 @@
-print("Here will be a place for learn all about API")
+print("Here will be a place for learn all about API (Aplication Programming Interface)")
