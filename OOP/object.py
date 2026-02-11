@@ -11,6 +11,9 @@ Author: Ahmadhakimitsnaini
 Created: 11-02-2026
 """
 
+
+from abc import ABC, abstractmethod     # Abstract Base Classes
+
 # ==============================================================================
 # PART 1: DEFINING A CLASS (The Blueprint)
 # ==============================================================================
