@@ -1,0 +1,1 @@
+print("Here is a place to learning about numpy")
