@@ -67,15 +67,17 @@ print(filterAngka(data))
     Pastikan fungsi Anda bisa menangani list kosong (kembalikan 0 jika list kosong agar tidak terjadi error pembagian nol).
 """
 def hitung_rerata(rata):
-    if rata :
-        hitung = [y for y in rata]
-        return sum(hitung) / len(hitung) # sum method for calculate total and len for calculate length of list
-    else :
-        print(0)
+    if rata: # Cek jika list tidak kosong
+        # Langsung hitung tanpa membuat list baru
+        return sum(rata) / len(rata)
+    else:
+        return 0 # Return angka 0, bukan print
 
-# rerata = [100,100,50,100,50]
-rerata2 = []
-print(hitung_rerata(rerata2))
+rerata_kosong = []
+rerata_isi = [100, 50, 100]
+
+print(hitung_rerata(rerata_kosong)) # Output: 0
+print(hitung_rerata(rerata_isi))    # Output: 83.33...
 
 # Question number 6
 """
