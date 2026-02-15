@@ -1,0 +1,1 @@
+print("Here is a place that using for OOP (Object Oriented Programming) exercise")
