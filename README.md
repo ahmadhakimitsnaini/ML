@@ -16,6 +16,12 @@ Tracking my progress from basics to advanced Machine Learning concepts.
   - Lambda functions (w/ built-ins)
   - Recursive algorithms
   - Recursive list manipulation
+- [x] **Object Oriented Programming**
+  - Encapsulation
+  - Inheritance
+  - Abstraction
+  - Polymorphism
+
 
 ## 🧩 Logic & Case Studies
 *Implementing Python logic in practical scenarios:*
