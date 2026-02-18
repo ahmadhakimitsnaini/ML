@@ -80,7 +80,7 @@ print(my_car)
 
 
 
-[Image of OOP inheritance diagram]
+# [Image of OOP inheritance diagram]
 
 
 # UgmPerson adalah ANAK dari Employee (Parent)
