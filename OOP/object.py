@@ -1,172 +1,106 @@
 """
-MODULE: OOP FUNDAMENTALS
-------------------------
-This script serves as a practical guide to Object-Oriented Programming (OOP) in Python.
-It covers:
-1. Class & Object Creation
-2. Instance Attributes & Methods
-3. Dunder (Magic) Methods like __init__ and __str__
+MODUL: DASAR OOP PYTHON
+-----------------------
+Panduan praktis memahami konsep dasar Object-Oriented Programming (OOP):
+1. Class & Object (Cetak biru & Hasil)
+2. Atribut & Method (Data & Fungsi)
+3. Magic Methods (__init__, __str__)
+4. Inheritance (Pewarisan sifat)
 
 Author: Ahmadhakimitsnaini
 Created: 11-02-2026
 """
 
-
-from abc import ABC, abstractmethod     # Abstract Base Classes
-
 # ==============================================================================
-# PART 1: DEFINING A CLASS (The Blueprint)
+# BAGIAN 1: DEFINISI CLASS (Cetak Biru)
 # ==============================================================================
 
 class Employee:
     """
-    A class representing an employee in an organization.
-    
-    Concepts covered:
-    - Encapsulation: Bundling data (name, age) and methods (biodata) together.
+    Class ini adalah 'cetakan' untuk membuat data karyawan.
+    Menggabungkan data (nama, umur) dan kemampuan (method) jadi satu.
     """
 
+    # __init__ adalah fungsi yang JALAN OTOMATIS saat objek dibuat.
     def __init__(self, name: str, age: int, university: str):
-        """
-        The Constructor Method.
-        Initializes the object's attributes when a new instance is created.
-        
-        Args:
-            name (str): The name of the employee.
-            age (int): The age of the employee.
-            university (str): Where the employee studied.
-        """
-        self.name = name          # Instance attribute
-        self.age = age            # Instance attribute
-        self.university = university # Instance attribute
+        self.name = name          # Menyimpan nama ke dalam objek
+        self.age = age            # Menyimpan umur
+        self.university = university # Menyimpan asal kampus
 
+    # Method: Fungsi yang dimiliki oleh objek
     def get_biodata(self) -> str:
-        """Returns a formatted string of the employee's basic info."""
-        return f"{self.name} is {self.age} years old and studied at {self.university}."
+        return f"{self.name}, {self.age} tahun, alumni {self.university}."
     
+    # Method dengan parameter tambahan
     def show_talent(self, talent: str) -> str:
-        """
-        Demonstrates a method that accepts an external argument ('talent').
-        """
-        return f"{self.name} has a hidden talent: {talent}."
+        return f"{self.name} punya bakat tersembunyi: {talent}."
 
 
-# --- Execution Example 1 ---
-print("\n--- EMPLOYEE CLASS DEMO ---")
+# --- Contoh Eksekusi 1 ---
+print("\n--- DEMO CLASS EMPLOYEE ---")
 
-# Instantiation: Creating an object (employee1) from the class (Employee)
+# Membuat Object (Realisasi dari cetak biru)
 employee1 = Employee("Ahmadhakimitsnaini", 20, "Politeknik Negeri Madiun")
 
-# Accessing methods
+# Menggunakan fitur (method) milik objek
 print(employee1.get_biodata())
 print(employee1.show_talent("Python Coding"))
 
 
 # ==============================================================================
-# PART 2: DUNDER METHODS (Magic Methods)
+# BAGIAN 2: MAGIC METHODS (Dunder Methods)
 # ==============================================================================
 
 class Car:
-    """
-    A class to demonstrate special 'Dunder' (Double Underscore) methods.
-    """
+    """Class untuk mendemonstrasikan fungsi spesial Python."""
 
-    def __init__(self, name: str, color: str):
+    def __init__(self, name, color):
         self.name = name
         self.color = color
 
+    # __str__ mengatur tampilan teks saat objek di-print.
+    # Jika tidak ada ini, hasil print hanya berupa kode memori yang aneh.
     def __str__(self) -> str:
-        """
-        The String Representation Method.
-        
-        Without this method, printing the object would look like: 
-        <__main__.Car object at 0x00...>
-        
-        With this method, we can define a human-readable string description.
-        """
-        return f"Car Model: {self.name} | Color: {self.color}"
+        return f"Mobil: {self.name} | Warna: {self.color}"
 
-# --- Execution Example 2 ---
-print("\n--- CAR CLASS DEMO (DUNDER METHODS) ---")
+# --- Contoh Eksekusi 2 ---
+print("\n--- DEMO MAGIC METHOD ---")
 
-my_car = Car("BMW M3", "Red")
+my_car = Car("BMW M3", "Merah")
 
-# When we call print(object), Python automatically looks for the __str__ method
+# Saat diprint, Python otomatis mencari method __str__
 print(my_car) 
 
 
 # ==============================================================================
-# PART 3: INHERITANCE (Pewarisan Sifat)
+# BAGIAN 3: INHERITANCE (Pewarisan)
 # ==============================================================================
-"""
-CONCEPT:
-Inheritance allows a class (Child) to derive attributes and methods from another class (Parent).
-This promotes code reusability. We don't need to rewrite the 'get_biodata' method
-for UgmPerson because they inherit it from Employee.
-"""
+# Konsep: Anak (Child) mewarisi semua sifat & fitur Orang Tua (Parent).
+# Kita tidak perlu menulis ulang kode yang sama.
 
-# Definisi Child Class (Subclass)
-# Format: class ChildName(ParentName):
+
+
+[Image of OOP inheritance diagram]
+
+
+# UgmPerson adalah ANAK dari Employee (Parent)
 class UgmPerson(Employee): 
-    """
-    Subclass of Employee. 
-    The 'pass' keyword means this class has no unique code/methods of its own yet;
-    it simply inherits EVERYTHING from the Employee class.
-    """
-    pass
+    pass  # 'pass' artinya: "Ikuti saja semua fitur orang tua, tidak ada tambahan."
 
 class ItbPerson(Employee): 
-    """
-    Subclass of Employee.
-    """
     pass 
 
-# --- Execution Example 3 ---
-print("\n--- INHERITANCE DEMO ---")
+# --- Contoh Eksekusi 3 ---
+print("\n--- DEMO INHERITANCE ---")
 
-# 1. Instantiation (Creating Objects)
-# Kita bisa memasukkan argumen (name, age, uni) meskipun di class UgmPerson
-# tidak ada method __init__, karena ia meminjam __init__ milik Employee.
-itb_person1 = ItbPerson("Ahmad Hakim Itsnaini", 20, "Institut Teknologi Bandung")
-ugm_person1 = UgmPerson("Sani", 21, "Universitas Gadjah Mada")
+# Kita bisa isi data nama/umur karena mewarisi __init__ milik Employee
+itb_student = ItbPerson("Ahmad Hakim", 20, "ITB")
+ugm_student = UgmPerson("Sani", 21, "UGM")
 
-# 2. Method Invocation
-# Memanggil method milik Parent (Employee) dari object Child
-print(f"ITB Bio: {itb_person1.get_biodata()}")
+# 1. Memanggil method warisan
+print(f"Info ITB: {itb_student.get_biodata()}")
 
-# Output object itu sendiri (akan menampilkan alamat memori kecuali kita buat __str__ di Parent)
-print(f"Object Info: {itb_person1}") 
-
-# 3. Method with Arguments
-print(f"UGM Talent: {ugm_person1.show_talent('Machine Learning')}")
-
-# 4. Checking Relationships (isinstance)
-# Fungsi isinstance() digunakan untuk mengecek apakah sebuah object berasal dari class tertentu.
-print("\n--- RELATIONSHIP CHECK ---")
-
-# Apakah itb_person1 adalah Employee? -> True (Karena ItbPerson anak dari Employee)
-print(f"Is ITB Person an Employee? : {isinstance(itb_person1, Employee)}")
-
-# Apakah ugm_person1 adalah ItbPerson? -> False (Karena mereka saudara beda class)
-print(f"Is UGM Person an ITB Person? : {isinstance(ugm_person1, ItbPerson)}")
-
-
-
-# ==============================================================================
-# THEORETICAL NOTES (4 PILLARS OF OOP)
-# ==============================================================================
-"""
-KEY TAKEAWAYS:
-
-1. ENCAPSULATION: 
-   Wrapping data (variables) and methods together as a single unit (Class).
-   
-2. INHERITANCE: 
-   Mechanism where a new class inherits properties from an existing class.
-   
-3. ABSTRACTION: 
-   Hiding internal implementation details and showing only functionality.
-   
-4. POLYMORPHISM: 
-   The ability of a function or object to behave in different forms.
-"""
+# 2. Cek Hubungan Keluarga (isinstance)
+print("\n--- CEK HUBUNGAN ---")
+# Apakah itb_student termasuk Employee? -> True (Karena dia turunan Employee)
+print(f"Apakah mahasiswa ITB seorang Employee? : {isinstance(itb_student, Employee)}")
