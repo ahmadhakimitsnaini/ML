@@ -1,16 +1,19 @@
-# ---------------------------------------------------------
-# LANGKAH 0: IMPORT LIBRARY
-# ---------------------------------------------------------
-# Kita mengimpor library pandas dan memberinya nama alias 'pd'.
-# Alias ini memudahkan kita agar tidak perlu mengetik 'pandas' terus-menerus.
+"""
+PANDAS DASAR: DATAFRAME & OPERASI UMUM
+--------------------------------------
+Skrip ini mendemonstrasikan:
+1. Pembuatan DataFrame dari Dictionary
+2. Agregasi (Menghitung rata-rata)
+3. Filtering (Penyaringan kondisi)
+4. Vectorized Operation (Membuat kolom baru)
+"""
+
 import pandas as pd
 
-# ---------------------------------------------------------
-# LANGKAH 1: PERSIAPAN DATA (DATA PREPARATION)
-# ---------------------------------------------------------
-# Kita membuat data mentah menggunakan Python Dictionary.
-# - 'Key' (kiri) akan menjadi Nama Kolom (Header).
-# - 'Value' (kanan) adalah List yang menjadi baris data.
+# ==========================================
+# 1. PERSIAPAN DATA & DATAFRAME
+# ==========================================
+# Membuat DataFrame (struktur tabel mirip Excel) dari Python Dictionary
 data = {
     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
     'Age': [24, 27, 22, 32],
@@ -18,45 +21,31 @@ data = {
     'Salary': [50000, 60000, 55000, 70000]
 }
 
-# ---------------------------------------------------------
-# LANGKAH 2: MEMBUAT DATAFRAME
-# ---------------------------------------------------------
-# Fungsi pd.DataFrame() mengubah dictionary di atas menjadi tabel terstruktur.
-# DataFrame adalah struktur data utama Pandas (mirip lembar kerja Excel).
 df = pd.DataFrame(data)
 
-# ---------------------------------------------------------
-# LANGKAH 3: MENAMPILKAN DATA
-# ---------------------------------------------------------
-print("--- Tabel Karyawan (DataFrame) ---")
-# Mencetak seluruh tabel ke layar.
+print("--- Tabel Karyawan ---")
 print(df)
 
-# ---------------------------------------------------------
-# LANGKAH 4: OPERASI DATA DASAR
-# ---------------------------------------------------------
-
-# A. Agregasi (Menghitung Rata-rata)
+# ==========================================
+# 2. AGREGASI DATA
+# ==========================================
+# Menghitung nilai rata-rata dari kolom 'Age' menggunakan .mean()
 print("\n--- Rata-rata Umur ---")
-# df['Age'] memilih kolom 'Age'.
-# .mean() adalah fungsi statistik bawaan untuk menghitung rata-rata.
 average_age = df['Age'].mean()
-print(f"Rata-rata umur adalah: {average_age}")
+print(f"Rata-rata umur: {average_age}")
 
-# B. Filtering (Menyaring Data)
-print("\n--- Filter: Karyawan di atas 25 tahun ---")
-# Logika Filtering:
-# 1. df['Age'] > 25 menghasilkan serangkaian True/False.
-# 2. df[...] membungkus kondisi tersebut untuk hanya menampilkan baris yang True.
+# ==========================================
+# 3. FILTERING (PENYARINGAN)
+# ==========================================
+# Mengambil baris data yang hanya memenuhi kondisi (Umur > 25)
+print("\n--- Karyawan > 25 Tahun ---")
 older_employees = df[df['Age'] > 25]
 print(older_employees)
 
-# C. Menambah Kolom Baru (Vectorized Operation)
-print("\n--- Menambah Kolom Baru (Bonus) ---")
-# Kita tidak perlu menggunakan "For Loop".
-# Pandas memungkinkan kita mengalikan seluruh kolom 'Salary' dengan 0.10 sekaligus.
-# Hasilnya langsung dimasukkan ke kolom baru bernama 'Bonus'.
+# ==========================================
+# 4. MEMBUAT KOLOM BARU (VECTORIZED)
+# ==========================================
+# Menghitung bonus 10% dari gaji dan langsung menyimpannya ke kolom baru
+print("\n--- Tabel dengan Kolom Bonus Baru ---")
 df['Bonus'] = df['Salary'] * 0.10
-
-# Tampilkan hasil akhir tabel yang sudah dimodifikasi
 print(df)
