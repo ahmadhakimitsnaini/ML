@@ -21,3 +21,9 @@ This module focuses on structured data manipulation, functioning much like a pro
 1. * **Data Aggregation**      : Calculating summary statistics, such as finding the average value in an 'Age' column.
 2. * **Filtering**             : Extracting specific rows of data that meet certain conditions (e.g., employees older than 25).
 3. * **Vectorized Operations** : Creating new columns mathematically, such as calculating a 10% bonus based on the 'Salary' column.
+
+### 3. Machine Learning with Scikit-Learn (`scikit.py`)
+This script implements a complete, fundamental Machine Learning pipeline. * **Dataset Handling**: Loading the classic Iris dataset provided by scikit-learn for classification tasks.
+1. * **Data Splitting**          : Dividing the data into training and testing sets to evaluate how well the model generalizes to new data.
+2. * **Model Selection**         : Initializing an ensemble method, specifically the Random Forest Classifier.
+3. * **Training and Evaluation** : Fitting the model to the training data, making predictions on the test set, and calculating the model's performance using an accuracy score.
