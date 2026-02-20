@@ -27,3 +27,9 @@ This script implements a complete, fundamental Machine Learning pipeline. * **Da
 1. * **Data Splitting**          : Dividing the data into training and testing sets to evaluate how well the model generalizes to new data.
 2. * **Model Selection**         : Initializing an ensemble method, specifically the Random Forest Classifier.
 3. * **Training and Evaluation** : Fitting the model to the training data, making predictions on the test set, and calculating the model's performance using an accuracy score.
+
+### 4. Deep Learning Foundation with PyTorch (`pyTorch.py`)
+This module explores the building blocks of neural networks. * **Tensors**: Creating Tensors, which are the core data structures in PyTorch that can run on GPUs, using dummy input and target data.
+1. * **Model Definition**      : Building a simple model class that inherits from `nn.Module`.
+2. * **Layers & Forward Pass** : Defining a simple linear layer (`nn.Linear`) to apply the transformation $y = Wx + b$, and specifying the data flow in the `forward` function.
+3. * **Execution**             : Initializing the model and passing input data through it to receive an untrained, random prediction.
