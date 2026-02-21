@@ -50,3 +50,29 @@ Dictionary digunakan untuk menyimpan data dalam format pasangan `key:value`. Sif
   * Untuk mendapatkan *key* dan *value* secara bersamaan saat *looping*, gunakan method `.items()`: `for x, y in biodata.items():`.
 
 ---
+
+## 3. Fungsi Lanjutan (Lambda & Rekursi)
+
+File referensi: `func.py`
+
+### A. Lambda Functions (Fungsi Anonim)
+Lambda adalah fungsi anonim dalam satu baris dengan sintaks `lambda arguments : expression`.
+* Lambda bisa memiliki satu atau beberapa parameter, contoh: `lambda x, y : x * y`.
+* Sangat kuat saat digunakan di dalam fungsi lain sebagai fungsi anonim.
+* Sering dikombinasikan dengan fungsi bawaan:
+  * `map()`: Menerapkan fungsi lambda ke setiap elemen list (contoh: menggandakan nilai angka).
+  * `filter()`: Menyaring elemen list berdasarkan kondisi lambda (contoh: mencari bilangan ganjil dengan `y % 2 != 0`).
+  * `sorted()`: Mengurutkan list, contohnya mengurutkan kata berdasarkan panjang karakternya menggunakan `key = lambda x : len(x)`.
+
+### B. Recursion (Fungsi Rekursif)
+Rekursi terjadi ketika sebuah fungsi memanggil dirinya sendiri, yang merupakan konsep penting dalam matematika dan pemrograman.
+* **Dua Komponen Utama Rekursi:**
+  * *Base Case*: Kondisi untuk menghentikan rekursi (sangat penting untuk mencegah error *stack overflow*).
+  * *Recursive Case*: Kondisi di mana fungsi memanggil dirinya sendiri dengan argumen yang sudah dimodifikasi.
+* **Contoh Kasus Penggunaan:**
+  * Menghitung nilai Faktorial dan deret Fibonacci (Rumus: `F(n) = F(n−1) + F(n−2)`).
+  * Memproses List: Mencari total jumlahan (`sumList`), nilai maksimum (`find_max`), dan nilai minimum (`find_minim`) dalam sebuah list dengan cara membandingkan elemen pertama dengan sisa elemen di list (`[1:]`).
+
+---
+
+*Dokumentasi ini dibuat untuk keperluan review dan pembelajaran mandiri.*
