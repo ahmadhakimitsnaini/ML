@@ -30,3 +30,23 @@ List adalah struktur data yang dapat menyimpan berbagai macam tipe data sekaligu
   * `.index('H')` mencari di index ke berapa elemen "H" berada, sedangkan operator `in` (contoh: `"H" in listSeveral`) akan menghasilkan nilai boolean True/False.
 
 ---
+
+## 2. Dictionary (Kamus Data)
+
+File referensi: `dic.py`
+
+Dictionary digunakan untuk menyimpan data dalam format pasangan `key:value`. Sifat utamanya adalah: tidak berurutan (sebelum Python 3.7), nilainya dapat diubah (changeable), dan tidak boleh ada duplikasi *key*.
+
+* **Cara Mengakses Data:**
+  * Menggunakan kurung siku `[]`: `thisCar["brand"]`.
+  * Menggunakan method `.get()`: `thisCar.get("brand")`. Ini lebih aman karena jika *key* tidak ditemukan, program akan mengembalikan nilai `None` alih-alih mengalami error.
+* **Cek Keberadaan & Update Data:**
+  * Gunakan sintaks `if "brand" in thisCar:` untuk memastikan sebuah *key* ada di dalam dictionary.
+  * Gunakan method `.update({"universitas" : "Politeknik Negeri Madiun"})` untuk mengedit data lama atau menambahkan data baru sekaligus.
+* **Menghapus Data:**
+  * `.pop("job")` menghapus *key* spesifik dan mengembalikan *value* yang dihapus.
+  * `del biodata["job"]` menghapus item spesifik menggunakan *keyword* bawaan Python.
+* **Looping (Iterasi):**
+  * Untuk mendapatkan *key* dan *value* secara bersamaan saat *looping*, gunakan method `.items()`: `for x, y in biodata.items():`.
+
+---
