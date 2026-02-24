@@ -34,29 +34,4 @@ def hitung_jarak(titik1, titik2):
     return jarak
 
 
-# =====================================================================
-# TUGAS 2: Cari data historis mana yang jaraknya PALING DEKAT
-# =====================================================================
-def tebak_status(data_baru, dataset):
-    jarak_terdekat = float('inf') # Set jarak awal dengan nilai tak terhingga
-    tebakan_terbaik = "Belum tahu"
-    
-    # Looping satu per satu data di dalam dataset
-    for data in dataset:
-        titik_lama = data[0]  # Mengambil list [Suhu, Kelembaban]
-        label_lama = data[1]  # Mengambil teks "Sehat" atau "Sakit"
-        
-        # Panggil fungsi hitung_jarak yang sudah kamu buat di Tugas 1
-        jarak_sekarang = hitung_jarak(data_baru, titik_lama)
-        
-        print(f"Jarak ke {label_lama} ({titik_lama}): {jarak_sekarang:.2f}")
-        
-        # TODO 2: Buat logika IF (Jika) di sini!
-        # JIKA jarak_sekarang LEBIH KECIL dari jarak_terdekat, maka:
-        # 1. Ubah jarak_terdekat menjadi jarak_sekarang
-        # 2. Ubah tebakan_terbaik menjadi label_lama
-        
-        # --- TULIS LOGIKA IF KAMU DI SINI ---
-        
-        
-    return tebakan_terbaik
+
