@@ -60,3 +60,13 @@ def tebak_status(data_baru, dataset):
         
         
     return tebakan_terbaik
+
+
+# 3. JALANKAN PROGRAM
+print(f"\nData Sensor Baru: Suhu {sensor_baru[0]}°C, Kelembaban {sensor_baru[1]}%")
+print("-" * 40)
+
+hasil_prediksi = tebak_status(sensor_baru, data_historis)
+
+print("-" * 40)
+print(f"🌟 KESIMPULAN AI: Tanaman ini diprediksi {hasil_prediksi.upper()}!")
