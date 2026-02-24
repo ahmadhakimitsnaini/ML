@@ -1,1 +1,4 @@
-print("here wil be use to train solve a problem")
+"""
+TANTANGAN LOGIKA MACHINE LEARNING
+Topik: Algoritma 1-Nearest Neighbor (Mencari Tetangga Terdekat)
+"""
