@@ -3,3 +3,9 @@
   - [History of Machine Learning](../1-Introduction/2-history-of-ML/README.md)
   - [ML and Fairness](../1-Introduction/3-fairness/README.md)
   - [Techniques of ML](../1-Introduction/4-techniques-of-ML/README.md)
+
+- Regression
+  - [Tools of the Trade](../2-Regression/1-Tools/README.md)
+  - [Data](../2-Regression/2-Data/README.md)
+  - [Linear Regression](../2-Regression/3-Linear/README.md)
+  - [Logistic Regression](../2-Regression/4-Logistic/README.md)
