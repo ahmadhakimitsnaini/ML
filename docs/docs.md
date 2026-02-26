@@ -29,3 +29,8 @@
   - [Translation and Sentiment](../6-NLP/3-Translation-Sentiment/README.md)
   - [Hotel Reviews 1](../6-NLP/4-Hotel-Reviews-1/README.md)
   - [Hotel Reviews 2](../6-NLP/5-Hotel-Reviews-2/README.md) 
+
+- Time Series Forecasting
+  - [Introduction to Time Series Forecasting](../7-TimeSeries/1-Introduction/README.md)
+  - [ARIMA](../7-TimeSeries/2-ARIMA/README.md)
+  - [SVR](../7-TimeSeries/3-SVR/README.md)
