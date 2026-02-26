@@ -22,3 +22,10 @@
 - Clustering
   - [Visualize your Data](../5-Clustering/1-Visualize/README.md)
   - [K-Means](../5-Clustering/2-K-Means/README.md)
+
+- NLP
+  - [Introduction to NLP](../6-NLP/1-Introduction-to-NLP/README.md)
+  - [NLP Tasks](../6-NLP/2-Tasks/README.md)
+  - [Translation and Sentiment](../6-NLP/3-Translation-Sentiment/README.md)
+  - [Hotel Reviews 1](../6-NLP/4-Hotel-Reviews-1/README.md)
+  - [Hotel Reviews 2](../6-NLP/5-Hotel-Reviews-2/README.md) 
