@@ -14,7 +14,7 @@
   - [Web App](../3-Web-App/1-Web-App/README.md)
 
 - Classification
-  - [Intro to Classification](../4-Classification/1-Introduction/README.md)
+  - [Intro to Classification] (../4-Classification/1-Introduction/README.md)
   - [Classifiers 1](../4-Classification/2-Classifiers-1/README.md)
   - [Classifiers 2](../4-Classification/3-Classifiers-2/README.md)
   - [Applied ML](../4-Classification/4-Applied/README.md)
