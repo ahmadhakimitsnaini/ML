@@ -34,3 +34,7 @@
   - [Introduction to Time Series Forecasting](../7-TimeSeries/1-Introduction/README.md)
   - [ARIMA](../7-TimeSeries/2-ARIMA/README.md)
   - [SVR](../7-TimeSeries/3-SVR/README.md)
+
+- Reinforcement Learning
+  - [Q-Learning](../8-Reinforcement/1-QLearning/README.md)
+  - [Gym](../8-Reinforcement/2-Gym/README.md)
