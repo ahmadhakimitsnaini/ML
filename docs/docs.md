@@ -9,3 +9,12 @@
   - [Data](../2-Regression/2-Data/README.md)
   - [Linear Regression](../2-Regression/3-Linear/README.md)
   - [Logistic Regression](../2-Regression/4-Logistic/README.md)
+
+- Build a Web App
+  - [Web App](../3-Web-App/1-Web-App/README.md)
+
+- Classification
+  - [Intro to Classification](../4-Classification/1-Introduction/README.md)
+  - [Classifiers 1](../4-Classification/2-Classifiers-1/README.md)
+  - [Classifiers 2](../4-Classification/3-Classifiers-2/README.md)
+  - [Applied ML](../4-Classification/4-Applied/README.md)
