@@ -18,3 +18,7 @@
   - [Classifiers 1](../4-Classification/2-Classifiers-1/README.md)
   - [Classifiers 2](../4-Classification/3-Classifiers-2/README.md)
   - [Applied ML](../4-Classification/4-Applied/README.md)
+
+- Clustering
+  - [Visualize your Data](../5-Clustering/1-Visualize/README.md)
+  - [K-Means](../5-Clustering/2-K-Means/README.md)
