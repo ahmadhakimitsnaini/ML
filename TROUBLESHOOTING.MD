@@ -174,3 +174,50 @@ python -c "import sklearn; print(sklearn.__version__)"
 
 ### Version Conflicts
 
+**Problem**: Package version incompatibility errors
+
+**Solution**:
+```bash
+# Create a new virtual environment
+python -m venv fresh-env
+source fresh-env/bin/activate  # or fresh-env\Scripts\activate on Windows
+
+# Install packages fresh
+pip install jupyter scikit-learn pandas numpy matplotlib seaborn
+
+# If specific version needed
+pip install scikit-learn==1.3.0
+```
+
+**Problem**: `pip install` fails with permission errors
+
+**Solution**:
+```bash
+# Install for current user only
+pip install --user package-name
+
+# Or use virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate
+pip install package-name
+```
+
+### Data Loading Issues
+
+**Problem**: `FileNotFoundError` when loading CSV files
+
+**Solution**:
+```python
+import os
+# Check current working directory
+print(os.getcwd())
+
+# Use relative paths from notebook location
+df = pd.read_csv('../../data/filename.csv')
+
+# Or use absolute paths
+df = pd.read_csv('/full/path/to/data/filename.csv')
+```
+
+---
+
