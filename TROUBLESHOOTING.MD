@@ -57,3 +57,14 @@ pip3 install jupyter
 # Verify installation
 jupyter --version
 ```
+
+**Problem**: Jupyter won't launch in browser
+
+**Solution**:
+```bash
+# Try specifying the browser
+jupyter notebook --browser=chrome
+
+# Or copy the URL with token from terminal and paste in browser manually
+# Look for: http://localhost:8888/?token=...
+```
