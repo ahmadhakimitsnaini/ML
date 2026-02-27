@@ -106,3 +106,13 @@ IRkernel::installspec(user = TRUE)
 3. Check for memory issues (see [Performance Issues](#performance-issues))
 4. Try running cells individually to identify problematic code
 
+**Problem**: Wrong Python kernel selected
+
+**Solution**:
+1. Check current kernel: `Kernel → Change Kernel`
+2. Select the correct Python version
+3. If kernel is missing, create it:
+```bash
+python -m ipykernel install --user --name=ml-env
+```
+
