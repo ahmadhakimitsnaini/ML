@@ -40,3 +40,20 @@ python -m venv ml-env
 ml-env\Scripts\activate
 # On macOS/Linux:
 source ml-env/bin/activate
+```
+
+### Jupyter Installation
+
+**Problem**: `jupyter: command not found`
+
+**Solution**:
+```bash
+# Install Jupyter
+pip install jupyter
+
+# Or with pip3
+pip3 install jupyter
+
+# Verify installation
+jupyter --version
+```
