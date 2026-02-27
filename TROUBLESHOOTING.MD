@@ -125,5 +125,24 @@ pip uninstall ipykernel
 pip install ipykernel
 
 # Register the kernel again
-python -
+python -m ipykernel install --user
+```
 
+### Notebook Cell Issues
+
+**Problem**: Cells are running but not showing output
+
+**Solution**:
+1. Check if cell is still running (look for `[*]` indicator)
+2. Restart kernel and run all cells: `Kernel → Restart & Run All`
+3. Check browser console for JavaScript errors (F12)
+
+**Problem**: Can't run cells - no response when clicking "Run"
+
+**Solution**:
+1. Check if Jupyter server is still running in terminal
+2. Refresh the browser page
+3. Close and reopen the notebook
+4. Restart Jupyter server
+
+---
