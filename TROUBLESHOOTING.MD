@@ -146,3 +146,31 @@ python -m ipykernel install --user
 4. Restart Jupyter server
 
 ---
+
+## Python Package Issues
+
+### Import Errors
+
+**Problem**: `ModuleNotFoundError: No module named 'sklearn'`
+
+**Solution**:
+```bash
+pip install scikit-learn
+
+# Common ML packages for this course
+pip install scikit-learn pandas numpy matplotlib seaborn
+```
+
+**Problem**: `ImportError: cannot import name 'X' from 'sklearn'`
+
+**Solution**:
+```bash
+# Update scikit-learn to latest version
+pip install --upgrade scikit-learn
+
+# Check version
+python -c "import sklearn; print(sklearn.__version__)"
+```
+
+### Version Conflicts
+
