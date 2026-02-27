@@ -27,3 +27,16 @@ This guide helps you solve common problems when working with the Machine Learnin
 1. Install Python 3.8 or higher from [python.org](https://www.python.org/downloads/)
 2. Verify installation: `python --version` or `python3 --version`
 3. On macOS/Linux, you may need to use `python3` instead of `python`
+
+**Problem**: Multiple Python versions causing conflicts
+
+**Solution**:
+```bash
+# Use virtual environments to isolate projects
+python -m venv ml-env
+
+# Activate virtual environment
+# On Windows:
+ml-env\Scripts\activate
+# On macOS/Linux:
+source ml-env/bin/activate
