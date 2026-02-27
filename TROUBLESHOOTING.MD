@@ -68,3 +68,17 @@ jupyter notebook --browser=chrome
 # Or copy the URL with token from terminal and paste in browser manually
 # Look for: http://localhost:8888/?token=...
 ```
+
+### R Installation
+
+**Problem**: R packages won't install
+
+**Solution**:
+```r
+# Ensure you have the latest R version
+# Install packages with dependencies
+install.packages(c("tidyverse", "tidymodels", "caret"), dependencies = TRUE)
+
+# If compilation fails, try installing binary versions
+install.packages("package-name", type = "binary")
+```
