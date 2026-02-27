@@ -94,3 +94,15 @@ IRkernel::installspec(user = TRUE)
 
 ---
 
+## Jupyter Notebook Issues
+
+### Kernel Issues
+
+**Problem**: Kernel keeps dying or restarting
+
+**Solution**:
+1. Restart the kernel: `Kernel → Restart`
+2. Clear output and restart: `Kernel → Restart & Clear Output`
+3. Check for memory issues (see [Performance Issues](#performance-issues))
+4. Try running cells individually to identify problematic code
+
