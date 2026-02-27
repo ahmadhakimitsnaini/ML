@@ -14,3 +14,16 @@ This guide helps you solve common problems when working with the Machine Learnin
 - [Common Error Messages](#common-error-messages)
 - [Performance Issues](#performance-issues)
 - [Environment and Configuration](#environment-and-configuration)
+
+---
+
+## Installation Issues
+
+### Python Installation
+
+**Problem**: `python: command not found`
+
+**Solution**:
+1. Install Python 3.8 or higher from [python.org](https://www.python.org/downloads/)
+2. Verify installation: `python --version` or `python3 --version`
+3. On macOS/Linux, you may need to use `python3` instead of `python`
