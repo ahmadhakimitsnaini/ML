@@ -116,3 +116,14 @@ IRkernel::installspec(user = TRUE)
 python -m ipykernel install --user --name=ml-env
 ```
 
+**Problem**: Kernel won't start
+
+**Solution**:
+```bash
+# Reinstall ipykernel
+pip uninstall ipykernel
+pip install ipykernel
+
+# Register the kernel again
+python -
+
