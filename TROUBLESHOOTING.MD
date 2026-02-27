@@ -221,3 +221,22 @@ df = pd.read_csv('/full/path/to/data/filename.csv')
 
 ---
 
+## R Environment Issues
+
+### Package Installation
+
+**Problem**: Package installation fails with compilation errors
+
+**Solution**:
+```r
+# Install binary version (Windows/macOS)
+install.packages("package-name", type = "binary")
+
+# Update R to latest version if packages require it
+# Check R version
+R.version.string
+
+# Install system dependencies (Linux)
+# For Ubuntu/Debian, in terminal:
+# sudo apt-get install r-base-dev
+```
