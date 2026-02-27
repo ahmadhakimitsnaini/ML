@@ -82,3 +82,15 @@ install.packages(c("tidyverse", "tidymodels", "caret"), dependencies = TRUE)
 # If compilation fails, try installing binary versions
 install.packages("package-name", type = "binary")
 ```
+
+**Problem**: IRkernel not available in Jupyter
+
+**Solution**:
+```r
+# In R console
+install.packages('IRkernel')
+IRkernel::installspec(user = TRUE)
+```
+
+---
+
