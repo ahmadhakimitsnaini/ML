@@ -57,7 +57,7 @@ Welcome to my personal roadmap and learning log! This repository documents my jo
 
 ### Phase 2: Machine Learning Core 🤖
 > *Understanding patterns and algorithms.*
-- [ ] **Supervised Learning** (Regression, Classification, Decision Trees)
+- [x] **Supervised Learning** (Regression, Classification, Decision Trees)
 - [ ] **Unsupervised Learning** (Clustering, PCA)
 - [ ] **Model Evaluation** (Accuracy, Precision/Recall, ROC/AUC)
 - [ ] **Frameworks**: Scikit-Learn
