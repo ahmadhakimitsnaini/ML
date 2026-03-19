@@ -31,9 +31,9 @@ Tracking my progress from basics to advanced Machine Learning concepts.
 4.  **JIT Challenge:** Optimizing resource allocation.
 
 ## 🔜 Next Steps
-- [x] NumPy (Matrix Math)
-- [x] Pandas (Data Analysis)
-- [ ] Matplotlib (Visualization)
+- [] NumPy (Matrix Math)
+- [] Pandas (Data Analysis)
+- [] Matplotlib (Visualization)
 
 
 # 🚀 My Journey to AI Engineering
