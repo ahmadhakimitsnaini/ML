@@ -31,9 +31,9 @@ Tracking my progress from basics to advanced Machine Learning concepts.
 4.  **JIT Challenge:** Optimizing resource allocation.
 
 ## 🔜 Next Steps
-- [x] NumPy (Matrix Math)
-- [x] Pandas (Data Analysis)
-- [x] Matplotlib (Visualization)
+- [] NumPy (Matrix Math)
+- [] Pandas (Data Analysis)
+- [] Matplotlib (Visualization)
 
 
 # 🚀 My Journey to AI Engineering
@@ -104,6 +104,7 @@ I am following these curated curriculums and repositories:
 | Project | Tech Stack | Description |
 | :--- | :--- | :--- |
 | **[Plantify](https://github.com/ahmadhakimitsnaini/plantify)** | Python, IoT, CNN | AI-powered hydroponic monitoring & disease detection system. |
+| **[DataKu](https://github.com/ahmadhakimitsnaini/dataku)** | Python, machine learning, | Platfrom Automated machine learning|
 | **TBA** | PyTorch, NLP | *Upcoming project on Chatbot/LLM.* |
 
 ---
