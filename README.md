@@ -32,7 +32,7 @@ Tracking my progress from basics to advanced Machine Learning concepts.
 
 ## 🔜 Next Steps
 - [x] NumPy (Matrix Math)
-- [ ] Pandas (Data Analysis)
+- [x] Pandas (Data Analysis)
 - [ ] Matplotlib (Visualization)
 
 
