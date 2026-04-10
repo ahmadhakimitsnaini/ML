@@ -33,7 +33,7 @@ Tracking my progress from basics to advanced Machine Learning concepts.
 ## 🔜 Next Steps
 - [x] NumPy (Matrix Math)
 - [x] Pandas (Data Analysis)
-- [] Matplotlib (Visualization)
+- [x] Matplotlib (Visualization)
 
 
 # 🚀 My Journey to AI Engineering
